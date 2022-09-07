@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
@@ -6,20 +6,23 @@ function Navbar() {
       <div className="nav--container center-flexed">
         <h1>BLOGGII</h1>
         <ul className="center-flexed">
-          <NavLink to="/" className={({isActive}) => (isActive ? "active" : "")}>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <li>Home</li>
           </NavLink>
 
           <NavLink
             to="/blogs"
-            className={({isActive}) => (isActive ? "active" : "")}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             <li>Blogs</li>
           </NavLink>
 
           <NavLink
             to="/create"
-            className={({isActive}) => (isActive ? "active" : "")}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             <li>Post</li>
           </NavLink>

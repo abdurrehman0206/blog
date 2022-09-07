@@ -50,7 +50,14 @@ $border-test: (1px solid magenta);
   height: 100vh;
   margin: 0 auto;
 }
+.home--container {
+  flex-direction: column;
 
+  margin-top: $primary-size;
+  h1 {
+    color: $main-color;
+  }
+}
 .nav--container {
   justify-content: space-between;
   h1 {
@@ -238,6 +245,10 @@ $border-test: (1px solid magenta);
   }
 }
 .active {
+  li {
+    transition: 1s ease-in-out;
+    text-decoration: underline;
+  }
   color: $main-color;
 }
 // BLOG POST FORM END

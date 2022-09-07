@@ -42,6 +42,14 @@ textarea {
   margin: 0 auto;
 }
 
+.home--container {
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.home--container h1 {
+  color: #7fbcd2;
+}
+
 .nav--container {
   justify-content: space-between;
 }
@@ -246,4 +254,8 @@ textarea {
 }
 .active {
   color: #7fbcd2;
+}
+.active li {
+  transition: 1s ease-in-out;
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */
