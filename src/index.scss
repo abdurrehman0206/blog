@@ -1,0 +1,239 @@
+// GENERAL RULES START
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  background-color: #fbf8f1;
+  color: #7f8487;
+}
+a {
+  color: #7f8487;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  border: none;
+}
+input,
+textarea {
+  outline: none;
+}
+// GENERAL RULES END
+
+// VARIABLES START
+$border-rad: 10px;
+$primary-size: 1rem;
+$secondry-size: 2rem;
+$tertiary-size: 3rem;
+$main-color: #7fbcd2;
+
+$border-test: (1px solid magenta);
+// VARIABLES END
+
+// CUSTOM CLASSES START
+.center-flexed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// CUSTOM CLASSES END
+.main--container {
+  box-sizing: border-box;
+  width: 80%;
+  min-width: 380px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.nav--container {
+  justify-content: space-between;
+  h1 {
+    color: $main-color;
+  }
+  ul {
+    width: 40%;
+    justify-content: space-between;
+    a {
+      padding: 0 $primary-size;
+      li {
+        font-weight: bold;
+      }
+      &:hover {
+        transition: all ease-in-out 0.2s;
+        color: $main-color;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .nav--container {
+    margin: 0;
+    flex-direction: column;
+    ul {
+      width: 100%;
+    }
+  }
+}
+.blog--container {
+  width: 100%;
+}
+.blog {
+  box-sizing: border-box;
+  width: 100%;
+  padding: $primary-size;
+  border-radius: $border-rad;
+  box-shadow: 1px 2px 4px -3px black;
+  border-left: 5px solid $main-color;
+  border-right: 5px solid $main-color;
+
+  margin: $primary-size 0;
+  h1 {
+    color: $main-color;
+  }
+  &:hover {
+    box-shadow: 1px 2px 4px -2px rgba(0, 0, 0, 0.651);
+  }
+  .delete--btn {
+    background-color: $main-color;
+    padding: 0.5rem $primary-size;
+    border-radius: 5px;
+    color: white;
+    font-size: $primary-size;
+    box-shadow: 1px 2px 5px -3px black;
+    &:active {
+      transform: scale(0.92);
+    }
+  }
+}
+// LOADER START
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateCounterClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.loader1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $main-color;
+  margin: 0 auto;
+  margin-top: $secondry-size;
+  &::after {
+    content: "";
+    position: absolute;
+    margin: 0;
+    width: 20px;
+    height: 63px;
+    background-color: #fbf8f1;
+    animation: 1s rotateClockwise infinite;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fbf8f1;
+  }
+}
+.loader2 {
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $main-color;
+  &::after {
+    content: "";
+    position: absolute;
+    margin: 0;
+    width: 43px;
+    height: 15px;
+    background-color: #fbf8f1;
+    animation: 1s rotateCounterClockwise infinite;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fbf8f1;
+  }
+}
+// LOADER END
+// BLLOG POST FORM START
+.post--container {
+  width: 100%;
+
+  .col {
+    display: block;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: $primary-size;
+    input,
+    textarea {
+      flex-basis: 100%;
+      border: none;
+      border: 2px solid $main-color;
+      border-radius: 5px;
+      padding: 0.5rem;
+    }
+    label {
+      display: inline-block;
+      width: 20%;
+      font-weight: bold;
+    }
+  }
+  .interect--container {
+    button {
+      margin-top: $primary-size;
+      padding: 0.5rem $primary-size;
+      border-radius: 5px;
+      background-color: $main-color;
+      color: white;
+      font-size: $primary-size;
+      box-shadow: 1px 2px 5px -3px black;
+      &:active {
+        transform: scale(0.92);
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .post--container {
+    .col {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      label {
+        text-align: center;
+        width: 100%;
+      }
+      input,textarea{
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// BLOG POST FORM END
