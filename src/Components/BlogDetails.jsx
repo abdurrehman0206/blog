@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Blog from "./Blog";
 import { useParams, useNavigate } from "react-router-dom";
-import useDelete from "./useDelete";
 import useFetch from "./useFetch";
 import Loader from "./Loader";
 function BlogDetails() {
