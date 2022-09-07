@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 import Loader from "./Loader";
 function BlogDetails() {
   const [deleteError, setDeleteError] = useState(null);
-  const [isDeleted, setDeleted] = useState(false);
+
   const nav = useNavigate();
   const { id } = useParams();
   const url = "https://631655b282797be77fe38cfa.mockapi.io/blogs/" + id;
@@ -27,7 +27,6 @@ function BlogDetails() {
           console.log("Fetch Aborted");
         } else {
           setDeleteError(err.message);
-          setDeleted(true);
         }
       });
     return () => abort.abort();
@@ -41,6 +40,8 @@ function BlogDetails() {
       <button className="delete--btn" onClick={HandleDelete}>
         Delete
       </button>
+      {error && <p className="error--message">{error}</p>}
+      {deleteError && <p className="error--message">{deleteError}</p>}
     </div>
   );
 

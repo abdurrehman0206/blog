@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   background-color: #fbf8f1;
   color: #7f8487;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -62,7 +63,7 @@ textarea {
   color: #7fbcd2;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .nav--container {
     margin: 0;
     flex-direction: column;
@@ -227,7 +228,7 @@ textarea {
   transform: scale(0.92);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .post--container .col {
     flex-direction: column;
     align-items: center;
@@ -237,8 +238,12 @@ textarea {
     text-align: center;
     width: 100%;
   }
-  .post--container .col input, .post--container .col textarea {
+  .post--container .col input,
+.post--container .col textarea {
     box-sizing: border-box;
     width: 100%;
   }
+}
+.active {
+  color: #7fbcd2;
 }/*# sourceMappingURL=index.css.map */

@@ -6,6 +6,7 @@ body {
   box-sizing: border-box;
   background-color: #fbf8f1;
   color: #7f8487;
+  -webkit-tap-highlight-color: transparent;
 }
 a {
   color: #7f8487;
@@ -70,7 +71,7 @@ $border-test: (1px solid magenta);
     }
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .nav--container {
     margin: 0;
     flex-direction: column;
@@ -218,7 +219,7 @@ $border-test: (1px solid magenta);
     }
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .post--container {
     .col {
       flex-direction: column;
@@ -228,12 +229,15 @@ $border-test: (1px solid magenta);
         text-align: center;
         width: 100%;
       }
-      input,textarea{
+      input,
+      textarea {
         box-sizing: border-box;
         width: 100%;
       }
     }
   }
 }
-
+.active {
+  color: $main-color;
+}
 // BLOG POST FORM END

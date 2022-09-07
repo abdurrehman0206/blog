@@ -1,22 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav>
       <div className="nav--container center-flexed">
         <h1>BLOGGII</h1>
         <ul className="center-flexed">
-          <Link to="/">
+          <NavLink to="/" className={({isActive}) => (isActive ? "active" : "")}>
             <li>Home</li>
-          </Link>
+          </NavLink>
 
-          <Link to="/blogs">
+          <NavLink
+            to="/blogs"
+            className={({isActive}) => (isActive ? "active" : "")}
+          >
             <li>Blogs</li>
-          </Link>
+          </NavLink>
 
-          <Link to="/create">
+          <NavLink
+            to="/create"
+            className={({isActive}) => (isActive ? "active" : "")}
+          >
             <li>Post</li>
-          </Link>
+          </NavLink>
         </ul>
       </div>
     </nav>
