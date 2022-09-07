@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useFetch from "./useFetch";
 import Blog from "./Blog";
 import Loader from "./Loader";
